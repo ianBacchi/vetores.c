@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+/*Faça um programa que receba e armazene 20 números em
+um vetor. Em seguida exiba:
+ Quantos números são iguais a 30;
+ Quantos números são maior que a média;
+ Quantos números são iguais à media;*/
+
+
+int main(){
+
+    int vetor[20];
+    int contador30 = 0;
+    int soma = 0;
+    int media = 0;
+    int acimamedia = 0;
+    int contadorigualmedia = 0;
+    int contadoracimamedia = 0;
+
+    for (int i = 0; i < 20; i++)
+    {
+        printf("Digite o valor do vetor %i: ",i);
+        scanf("%i",&vetor[i]);
+    }
+
+    for (int b = 0; b < 20; b++)
+    {
+       if (vetor[b] == 30)
+       {
+        contador30++;
+       }
+       
+    }
+
+
+    printf("Existem %i valores maior que 30\n", contador30);
+
+    for (int i = 0; i < 20; i++)
+    {
+        soma += vetor[i];
+    }
+
+
+    media = soma / 20;
+    
+
+    for (int i = 0; i < 20; i++)
+    {
+        if (vetor[i] == media)
+        {
+            contadorigualmedia++;
+        }
+        
+    }
+
+    printf("existe %i igual a media\n", contadorigualmedia);
+
+
+    for (int i = 0; i < 20; i++)
+    {
+        if (vetor[i] > media)
+        {
+            contadoracimamedia++;
+        }
+        
+    }
+    
+printf("existe %i acima da media\n", contadoracimamedia);
+
+
+    return 0;
+}//main
